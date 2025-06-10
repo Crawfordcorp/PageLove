@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Nós Dois 💖</title>
+  <link rel="stylesheet" href="nos.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Nosso Amor em Momentos</h1>
+    <p class="intro">Cada imagem, um pedacinho do que somos juntos. Feliz Dia dos Namorados!</p>
+    <div class="slideshow">
+      <img id="slide" src="imgs/slide1.jpg" alt="Slide Romântico" />
+    </div>
+    <audio controls autoplay loop>
+      <source src="audio/always.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+  <script>
+    const slides = [
+      "imgs/slide1.jpg", "imgs/slide2.jpg", "imgs/slide3.jpg",
+      "imgs/slide4.jpg", "imgs/slide5.jpg", "imgs/slide6.jpg",
+      "imgs/slide7.jpg", "imgs/slide8.jpg", "imgs/slide9.jpg"
+    ];
+    let index = 0;
+    const slide = document.getElementById("slide");
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      slide.src = slides[index];
+    }, 3500);
+  </script>
+</body>
+</html>
